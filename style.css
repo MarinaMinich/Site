@@ -1,124 +1,179 @@
 /* Общие стили */
 body {
-    font-family: 'Comic Sans MS', cursive, sans-serif;
-    background-color: #f0f8ff;
-    color: #333;
-    margin: 0;
-    padding: 0;
-    text-align: center;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background-color: #f0f8ff;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+header {
+  background-color: #ffd700;
+  padding: 20px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #2e8b57;
+  animation: fadeIn 2s ease-in-out;
+}
+
+main {
+  padding: 20px;
+}
+
+.profession {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 1000px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: slideIn 1s ease-in-out;
+}
+
+.content-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.text-content {
+  flex: 1;
+  text-align: center;
+}
+
+.text-content h2 {
+  font-size: 2rem;
+  color: #228b22;
+  margin-top: 0;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.text-content p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.poem-placeholder {
+  background-color: #f9f9f9;
+  border: 2px dashed #ccc;
+  padding: 15px;
+  margin: 20px 0;
+  font-style: italic;
+  color: #555;
+  text-align: center;
+  animation: fadeIn 2.5s ease-in-out;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  max-width: 300px;
+  height: auto;
+  border-radius: 10px;
+  animation: zoomIn 1.5s ease-in-out;
+}
+
+footer {
+  background-color: #2e8b57;
+  color: #fff;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  animation: fadeIn 3s ease-in-out;
+}
+
+/* Анимации */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  
-  header {
-    background-color: #ffd700;
-    padding: 20px;
+  to {
+    opacity: 1;
   }
-  
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Медиазапросы для мобильных устройств */
+@media (max-width: 768px) {
   header h1 {
-    font-size: 2.5rem;
-    color: #2e8b57;
-    animation: fadeIn 2s ease-in-out;
+    font-size: 2rem; /* Уменьшаем размер заголовка */
   }
-  
-  main {
-    padding: 20px;
-  }
-  
-  .profession {
-    background-color: #fff;
-    border-radius: 15px;
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 1000px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    animation: slideIn 1s ease-in-out;
-  }
-  
+
   .content-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 20px;
+    flex-direction: column; /* Меняем направление flex на вертикальное */
+    gap: 10px; /* Уменьшаем отступы */
   }
-  
-  .text-content {
-    flex: 1;
-    text-align: center;
-  }
-  
+
   .text-content h2 {
-    font-size: 2rem;
-    color: #228b22;
-    margin-top: 0;
-    animation: fadeIn 1.5s ease-in-out;
+    font-size: 1.5rem; /* Уменьшаем размер заголовка профессии */
   }
-  
+
   .text-content p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    animation: fadeIn 2s ease-in-out;
+    font-size: 1rem; /* Уменьшаем размер текста */
   }
-  
+
   .poem-placeholder {
-    background-color: #f9f9f9;
-    border: 2px dashed #ccc;
-    padding: 15px;
-    margin: 20px 0;
-    font-style: italic;
-    color: #555;
-    text-align: center;
-    animation: fadeIn 2.5s ease-in-out;
+    font-size: 0.9rem; /* Уменьшаем размер стиха */
   }
-  
-  .image-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
+
   img {
-    max-width: 300px;
-    height: auto;
-    border-radius: 10px;
-    animation: zoomIn 1.5s ease-in-out;
+    max-width: 100%; /* Картинка занимает всю ширину контейнера */
+    margin-top: 10px; /* Добавляем отступ сверху */
   }
-  
+
   footer {
-    background-color: #2e8b57;
-    color: #fff;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    animation: fadeIn 3s ease-in-out;
+    font-size: 0.9rem; /* Уменьшаем размер текста в футере */
   }
-  
-  /* Анимации */
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.5rem; /* Ещё больше уменьшаем размер заголовка */
   }
-  
-  @keyframes slideIn {
-    from {
-      transform: translateX(-100%);
-      opacity: 0;
-    }
-    to {
-      transform: translateX(0);
-      opacity: 1;
-    }
+
+  .text-content h2 {
+    font-size: 1.2rem; /* Ещё больше уменьшаем размер заголовка профессии */
   }
-  
-  @keyframes zoomIn {
-    from {
-      transform: scale(0.5);
-      opacity: 0;
-    }
-    to {
-      transform: scale(1);
-      opacity: 1;
-    }
+
+  .text-content p {
+    font-size: 0.9rem; /* Ещё больше уменьшаем размер текста */
   }
+
+  .poem-placeholder {
+    font-size: 0.8rem; /* Ещё больше уменьшаем размер стиха */
+  }
+
+  footer {
+    font-size: 0.8rem; /* Ещё больше уменьшаем размер текста в футере */
+  }
+}
